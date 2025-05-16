@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Regressão Linear Simples</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Regressão Linear Simples</h1>
+      <form method="POST" enctype="multipart/form-data">
+        <label for="file">Selecione o arquivo CSV:</label><br />
+        <input type="file" name="file" required /><br /><br />
+
+        <label for="input_x">Digite um valor de x:</label><br />
+        <input type="number" step="any" name="input_x" required /><br /><br />
+
+        <input type="submit" value="Prever" />
+      </form>
+
+      {% if prediction is not none %}
+      <div class="result">
+        <h2>Resultado:</h2>
+        <p><strong>y previsto:</strong> {{ prediction }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
