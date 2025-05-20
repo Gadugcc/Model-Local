@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from sklearn.linear_model import LinearRegression
 import numpy as np
-
+# Asdicionando qualquer comentario
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
